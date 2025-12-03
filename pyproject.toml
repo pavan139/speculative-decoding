@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools==78.1.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "speculative-decoding-lab"
+version = "0.1.0"
+description = "Correctness-first speculative sampling with synthetic probability checks and a local HF adapter"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+hf = ["torch>=2.3,<3", "transformers>=4.57.1,<5"]
+
+[project.scripts]
+speculative-decoding = "speculative_decoding.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

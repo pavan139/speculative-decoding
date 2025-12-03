@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "07",
+  "repository_name": "speculative-decoding",
+  "title": "Speculative Decoding",
+  "package": "speculative_decoding",
+  "focus": "Exact rejection sampling, autoregressive distributions, profiling",
+  "layout": {
+    "docs_root": "research",
+    "tests_root": "checks",
+    "tools_root": "bench",
+    "config_root": "experiments",
+    "examples_root": "results",
+    "verifier": "bench/check_sampling.py",
+    "source_roots": [
+      "src"
+    ],
+    "documents": {
+      "architecture": "research/draft-verify-map.md",
+      "design": "research/probability-and-cache.md",
+      "review": "research/correctness-notebook.md",
+      "experiments": "research/measurement-protocol.md",
+      "publishing": "research/releasing-a-sampler.md",
+      "validation": "research/checks-run.md"
+    }
+  }
+}
