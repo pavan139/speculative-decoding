@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "description": "Documented equivalent of CLI defaults; CLI arguments are authoritative.",
+  "samples_per_distribution": 3000,
+  "seed": 17,
+  "draft_tokens": 4,
+  "max_context": 4096,
+  "backend": "synthetic_markov"
+}
