@@ -1,0 +1,196 @@
+{
+  "experiment": "exact_enumerated_target_joint_vs_monte_carlo_speculative",
+  "learned_model_evaluated": false,
+  "samples": 6000,
+  "seed": 17,
+  "horizon": 4,
+  "draft_tokens": 3,
+  "stop_token": null,
+  "target_mass": 1.0000000000000002,
+  "total_variation_distance": 0.019033333333333294,
+  "max_absolute_error": 0.008633333333333326,
+  "simultaneous_99_percent_hoeffding_band": 0.025934060757987456,
+  "illegal_output_count": 0,
+  "cases": [
+    {
+      "tokens": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "target_probability": 0.30720000000000003,
+      "count": 1895,
+      "empirical_probability": 0.31583333333333335
+    },
+    {
+      "tokens": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "target_probability": 0.07680000000000001,
+      "count": 426,
+      "empirical_probability": 0.071
+    },
+    {
+      "tokens": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "target_probability": 0.009600000000000001,
+      "count": 48,
+      "empirical_probability": 0.008
+    },
+    {
+      "tokens": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "target_probability": 0.0864,
+      "count": 557,
+      "empirical_probability": 0.09283333333333334
+    },
+    {
+      "tokens": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "target_probability": 0.009600000000000001,
+      "count": 46,
+      "empirical_probability": 0.007666666666666666
+    },
+    {
+      "tokens": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "target_probability": 0.0024000000000000002,
+      "count": 10,
+      "empirical_probability": 0.0016666666666666668
+    },
+    {
+      "tokens": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "target_probability": 0.0108,
+      "count": 76,
+      "empirical_probability": 0.012666666666666666
+    },
+    {
+      "tokens": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "target_probability": 0.0972,
+      "count": 571,
+      "empirical_probability": 0.09516666666666666
+    },
+    {
+      "tokens": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "target_probability": 0.025600000000000008,
+      "count": 155,
+      "empirical_probability": 0.025833333333333333
+    },
+    {
+      "tokens": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "target_probability": 0.006400000000000002,
+      "count": 32,
+      "empirical_probability": 0.005333333333333333
+    },
+    {
+      "tokens": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "target_probability": 0.0008000000000000003,
+      "count": 6,
+      "empirical_probability": 0.001
+    },
+    {
+      "tokens": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "target_probability": 0.0072000000000000015,
+      "count": 30,
+      "empirical_probability": 0.005
+    },
+    {
+      "tokens": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "target_probability": 0.028800000000000006,
+      "count": 163,
+      "empirical_probability": 0.027166666666666665
+    },
+    {
+      "tokens": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "target_probability": 0.0072000000000000015,
+      "count": 31,
+      "empirical_probability": 0.005166666666666667
+    },
+    {
+      "tokens": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "target_probability": 0.032400000000000005,
+      "count": 200,
+      "empirical_probability": 0.03333333333333333
+    },
+    {
+      "tokens": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "target_probability": 0.2916000000000001,
+      "count": 1754,
+      "empirical_probability": 0.29233333333333333
+    }
+  ],
+  "limitations": [
+    "Target paths are exhaustively enumerated in float64; sampled agreement remains finite-sample evidence.",
+    "This measures distribution correctness, not inference throughput."
+  ]
+}
