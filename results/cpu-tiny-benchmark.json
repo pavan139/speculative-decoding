@@ -1,0 +1,2561 @@
+{
+  "experiment": "local_end_to_end_serial_vs_cached_serial_vs_cached_block",
+  "device": "cpu",
+  "cpu_threads": 1,
+  "machine": "x86_64",
+  "processor": "CPU model unavailable",
+  "python": "3.12.14",
+  "torch": "2.6.0+cpu",
+  "transformers": "4.57.1",
+  "target_checkpoint": "temporary random target fixture; weights removed after run",
+  "draft_checkpoint": "temporary random draft fixture; weights removed after run",
+  "target_parameters": 31616,
+  "draft_parameters": 6384,
+  "target_dtype": "torch.float32",
+  "draft_dtype": "torch.float32",
+  "warmups_per_mode": 2,
+  "measured_repeats": 5,
+  "prompt_tokens": 3,
+  "max_new_tokens": 24,
+  "draft_tokens": 4,
+  "modes": {
+    "serial_full_prefix": {
+      "median_seconds": 0.29286679300093965,
+      "median_tokens_per_second": 81.94851916831348,
+      "trials": [
+        {
+          "seed": 17,
+          "elapsed_seconds": 0.05684105900036229,
+          "generated_tokens": 5,
+          "tokens_per_second": 87.9645820808534,
+          "sampling": {
+            "tokens": [
+              33,
+              51,
+              61,
+              18,
+              1
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 33,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 51,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 61,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 18,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 1,
+                "position": 4
+              }
+            ],
+            "draft_calls": 4,
+            "target_calls": 5,
+            "proposed_tokens": 4,
+            "verified_tokens": 4,
+            "accepted_tokens": 4,
+            "rejected_tokens": 0,
+            "stop_reason": "stop_token",
+            "accepted_per_proposed": 1.0,
+            "accepted_per_verified": 1.0
+          },
+          "target_compute": {
+            "forward_calls": 5,
+            "prefill_forwards": 0,
+            "decode_forwards": 0,
+            "full_recompute_forwards": 5,
+            "input_tokens": 25,
+            "verified_blocks": 0,
+            "distribution_queries": 5,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 0
+          },
+          "draft_compute": {
+            "forward_calls": 4,
+            "prefill_forwards": 0,
+            "decode_forwards": 0,
+            "full_recompute_forwards": 4,
+            "input_tokens": 18,
+            "verified_blocks": 0,
+            "distribution_queries": 4,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 0
+          }
+        },
+        {
+          "seed": 18,
+          "elapsed_seconds": 0.2929103179994854,
+          "generated_tokens": 24,
+          "tokens_per_second": 81.93634203094943,
+          "sampling": {
+            "tokens": [
+              11,
+              42,
+              21,
+              12,
+              16,
+              16,
+              43,
+              19,
+              15,
+              46,
+              37,
+              13,
+              18,
+              0,
+              62,
+              14,
+              47,
+              38,
+              19,
+              7,
+              31,
+              59,
+              12,
+              43
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 11,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 42,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 21,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 12,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 16,
+                "position": 4
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 16,
+                "position": 5
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 43,
+                "position": 6
+              },
+              {
+                "kind": "target_residual",
+                "token": 19,
+                "position": 7
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 15,
+                "position": 8
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 46,
+                "position": 9
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 37,
+                "position": 10
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 13,
+                "position": 11
+              },
+              {
+                "kind": "target_bonus",
+                "token": 18,
+                "position": 12
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 0,
+                "position": 13
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 62,
+                "position": 14
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 14,
+                "position": 15
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 47,
+                "position": 16
+              },
+              {
+                "kind": "target_bonus",
+                "token": 38,
+                "position": 17
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 19,
+                "position": 18
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 7,
+                "position": 19
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 31,
+                "position": 20
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 59,
+                "position": 21
+              },
+              {
+                "kind": "target_bonus",
+                "token": 12,
+                "position": 22
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 43,
+                "position": 23
+              }
+            ],
+            "draft_calls": 21,
+            "target_calls": 24,
+            "proposed_tokens": 21,
+            "verified_tokens": 20,
+            "accepted_tokens": 19,
+            "rejected_tokens": 1,
+            "stop_reason": "max_new_tokens",
+            "accepted_per_proposed": 0.9047619047619048,
+            "accepted_per_verified": 0.95
+          },
+          "target_compute": {
+            "forward_calls": 24,
+            "prefill_forwards": 0,
+            "decode_forwards": 0,
+            "full_recompute_forwards": 24,
+            "input_tokens": 348,
+            "verified_blocks": 0,
+            "distribution_queries": 24,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 0
+          },
+          "draft_compute": {
+            "forward_calls": 21,
+            "prefill_forwards": 0,
+            "decode_forwards": 0,
+            "full_recompute_forwards": 21,
+            "input_tokens": 292,
+            "verified_blocks": 0,
+            "distribution_queries": 21,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 0
+          }
+        },
+        {
+          "seed": 19,
+          "elapsed_seconds": 0.2534566089998407,
+          "generated_tokens": 24,
+          "tokens_per_second": 94.69076420893443,
+          "sampling": {
+            "tokens": [
+              43,
+              50,
+              34,
+              32,
+              16,
+              16,
+              20,
+              17,
+              7,
+              4,
+              12,
+              34,
+              25,
+              46,
+              47,
+              25,
+              41,
+              10,
+              34,
+              47,
+              51,
+              25,
+              0,
+              28
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 43,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 50,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 34,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 32,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 16,
+                "position": 4
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 16,
+                "position": 5
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 20,
+                "position": 6
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 17,
+                "position": 7
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 7,
+                "position": 8
+              },
+              {
+                "kind": "target_bonus",
+                "token": 4,
+                "position": 9
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 12,
+                "position": 10
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 34,
+                "position": 11
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 25,
+                "position": 12
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 46,
+                "position": 13
+              },
+              {
+                "kind": "target_bonus",
+                "token": 47,
+                "position": 14
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 25,
+                "position": 15
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 41,
+                "position": 16
+              },
+              {
+                "kind": "target_residual",
+                "token": 10,
+                "position": 17
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 34,
+                "position": 18
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 47,
+                "position": 19
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 51,
+                "position": 20
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 25,
+                "position": 21
+              },
+              {
+                "kind": "target_bonus",
+                "token": 0,
+                "position": 22
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 28,
+                "position": 23
+              }
+            ],
+            "draft_calls": 21,
+            "target_calls": 24,
+            "proposed_tokens": 21,
+            "verified_tokens": 20,
+            "accepted_tokens": 19,
+            "rejected_tokens": 1,
+            "stop_reason": "max_new_tokens",
+            "accepted_per_proposed": 0.9047619047619048,
+            "accepted_per_verified": 0.95
+          },
+          "target_compute": {
+            "forward_calls": 24,
+            "prefill_forwards": 0,
+            "decode_forwards": 0,
+            "full_recompute_forwards": 24,
+            "input_tokens": 348,
+            "verified_blocks": 0,
+            "distribution_queries": 24,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 0
+          },
+          "draft_compute": {
+            "forward_calls": 21,
+            "prefill_forwards": 0,
+            "decode_forwards": 0,
+            "full_recompute_forwards": 21,
+            "input_tokens": 308,
+            "verified_blocks": 0,
+            "distribution_queries": 21,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 0
+          }
+        },
+        {
+          "seed": 20,
+          "elapsed_seconds": 0.29286679300093965,
+          "generated_tokens": 24,
+          "tokens_per_second": 81.94851916831348,
+          "sampling": {
+            "tokens": [
+              57,
+              44,
+              49,
+              58,
+              36,
+              10,
+              26,
+              63,
+              7,
+              19,
+              57,
+              21,
+              27,
+              39,
+              2,
+              6,
+              12,
+              43,
+              18,
+              44,
+              54,
+              14,
+              14,
+              0
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 57,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 44,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 49,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 58,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 36,
+                "position": 4
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 10,
+                "position": 5
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 26,
+                "position": 6
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 63,
+                "position": 7
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 7,
+                "position": 8
+              },
+              {
+                "kind": "target_bonus",
+                "token": 19,
+                "position": 9
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 57,
+                "position": 10
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 21,
+                "position": 11
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 27,
+                "position": 12
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 39,
+                "position": 13
+              },
+              {
+                "kind": "target_bonus",
+                "token": 2,
+                "position": 14
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 6,
+                "position": 15
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 12,
+                "position": 16
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 43,
+                "position": 17
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 18,
+                "position": 18
+              },
+              {
+                "kind": "target_bonus",
+                "token": 44,
+                "position": 19
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 54,
+                "position": 20
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 14,
+                "position": 21
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 14,
+                "position": 22
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 0,
+                "position": 23
+              }
+            ],
+            "draft_calls": 20,
+            "target_calls": 24,
+            "proposed_tokens": 20,
+            "verified_tokens": 20,
+            "accepted_tokens": 20,
+            "rejected_tokens": 0,
+            "stop_reason": "max_new_tokens",
+            "accepted_per_proposed": 1.0,
+            "accepted_per_verified": 1.0
+          },
+          "target_compute": {
+            "forward_calls": 24,
+            "prefill_forwards": 0,
+            "decode_forwards": 0,
+            "full_recompute_forwards": 24,
+            "input_tokens": 348,
+            "verified_blocks": 0,
+            "distribution_queries": 24,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 0
+          },
+          "draft_compute": {
+            "forward_calls": 20,
+            "prefill_forwards": 0,
+            "decode_forwards": 0,
+            "full_recompute_forwards": 20,
+            "input_tokens": 290,
+            "verified_blocks": 0,
+            "distribution_queries": 20,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 0
+          }
+        },
+        {
+          "seed": 21,
+          "elapsed_seconds": 0.2971767599992745,
+          "generated_tokens": 24,
+          "tokens_per_second": 80.76001636217647,
+          "sampling": {
+            "tokens": [
+              10,
+              44,
+              41,
+              30,
+              32,
+              15,
+              0,
+              23,
+              37,
+              2,
+              63,
+              47,
+              55,
+              39,
+              61,
+              41,
+              35,
+              18,
+              49,
+              13,
+              61,
+              57,
+              7,
+              30
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 10,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 44,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 41,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 30,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 32,
+                "position": 4
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 15,
+                "position": 5
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 0,
+                "position": 6
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 23,
+                "position": 7
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 37,
+                "position": 8
+              },
+              {
+                "kind": "target_bonus",
+                "token": 2,
+                "position": 9
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 63,
+                "position": 10
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 47,
+                "position": 11
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 55,
+                "position": 12
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 39,
+                "position": 13
+              },
+              {
+                "kind": "target_bonus",
+                "token": 61,
+                "position": 14
+              },
+              {
+                "kind": "target_residual",
+                "token": 41,
+                "position": 15
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 35,
+                "position": 16
+              },
+              {
+                "kind": "target_residual",
+                "token": 18,
+                "position": 17
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 49,
+                "position": 18
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 13,
+                "position": 19
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 61,
+                "position": 20
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 57,
+                "position": 21
+              },
+              {
+                "kind": "target_bonus",
+                "token": 7,
+                "position": 22
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 30,
+                "position": 23
+              }
+            ],
+            "draft_calls": 25,
+            "target_calls": 24,
+            "proposed_tokens": 25,
+            "verified_tokens": 20,
+            "accepted_tokens": 18,
+            "rejected_tokens": 2,
+            "stop_reason": "max_new_tokens",
+            "accepted_per_proposed": 0.72,
+            "accepted_per_verified": 0.9
+          },
+          "target_compute": {
+            "forward_calls": 24,
+            "prefill_forwards": 0,
+            "decode_forwards": 0,
+            "full_recompute_forwards": 24,
+            "input_tokens": 348,
+            "verified_blocks": 0,
+            "distribution_queries": 24,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 0
+          },
+          "draft_compute": {
+            "forward_calls": 25,
+            "prefill_forwards": 0,
+            "decode_forwards": 0,
+            "full_recompute_forwards": 25,
+            "input_tokens": 390,
+            "verified_blocks": 0,
+            "distribution_queries": 25,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 0
+          }
+        }
+      ],
+      "same_tokens_as_serial": true,
+      "observed_median_time_ratio_vs_serial": 1.0
+    },
+    "cached_serial": {
+      "median_seconds": 0.20431983300113643,
+      "median_tokens_per_second": 117.4628994526758,
+      "trials": [
+        {
+          "seed": 17,
+          "elapsed_seconds": 0.03502555999875767,
+          "generated_tokens": 5,
+          "tokens_per_second": 142.75289246417034,
+          "sampling": {
+            "tokens": [
+              33,
+              51,
+              61,
+              18,
+              1
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 33,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 51,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 61,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 18,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 1,
+                "position": 4
+              }
+            ],
+            "draft_calls": 4,
+            "target_calls": 5,
+            "proposed_tokens": 4,
+            "verified_tokens": 4,
+            "accepted_tokens": 4,
+            "rejected_tokens": 0,
+            "stop_reason": "stop_token",
+            "accepted_per_proposed": 1.0,
+            "accepted_per_verified": 1.0
+          },
+          "target_compute": {
+            "forward_calls": 5,
+            "prefill_forwards": 1,
+            "decode_forwards": 4,
+            "full_recompute_forwards": 0,
+            "input_tokens": 7,
+            "verified_blocks": 0,
+            "distribution_queries": 5,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 18
+          },
+          "draft_compute": {
+            "forward_calls": 4,
+            "prefill_forwards": 1,
+            "decode_forwards": 3,
+            "full_recompute_forwards": 0,
+            "input_tokens": 6,
+            "verified_blocks": 0,
+            "distribution_queries": 4,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 12
+          }
+        },
+        {
+          "seed": 18,
+          "elapsed_seconds": 0.15987453799971263,
+          "generated_tokens": 24,
+          "tokens_per_second": 150.117712928391,
+          "sampling": {
+            "tokens": [
+              11,
+              42,
+              21,
+              12,
+              16,
+              16,
+              43,
+              19,
+              15,
+              46,
+              37,
+              13,
+              18,
+              0,
+              62,
+              14,
+              47,
+              38,
+              19,
+              7,
+              31,
+              59,
+              12,
+              43
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 11,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 42,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 21,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 12,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 16,
+                "position": 4
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 16,
+                "position": 5
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 43,
+                "position": 6
+              },
+              {
+                "kind": "target_residual",
+                "token": 19,
+                "position": 7
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 15,
+                "position": 8
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 46,
+                "position": 9
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 37,
+                "position": 10
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 13,
+                "position": 11
+              },
+              {
+                "kind": "target_bonus",
+                "token": 18,
+                "position": 12
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 0,
+                "position": 13
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 62,
+                "position": 14
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 14,
+                "position": 15
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 47,
+                "position": 16
+              },
+              {
+                "kind": "target_bonus",
+                "token": 38,
+                "position": 17
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 19,
+                "position": 18
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 7,
+                "position": 19
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 31,
+                "position": 20
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 59,
+                "position": 21
+              },
+              {
+                "kind": "target_bonus",
+                "token": 12,
+                "position": 22
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 43,
+                "position": 23
+              }
+            ],
+            "draft_calls": 21,
+            "target_calls": 24,
+            "proposed_tokens": 21,
+            "verified_tokens": 20,
+            "accepted_tokens": 19,
+            "rejected_tokens": 1,
+            "stop_reason": "max_new_tokens",
+            "accepted_per_proposed": 0.9047619047619048,
+            "accepted_per_verified": 0.95
+          },
+          "target_compute": {
+            "forward_calls": 24,
+            "prefill_forwards": 1,
+            "decode_forwards": 23,
+            "full_recompute_forwards": 0,
+            "input_tokens": 26,
+            "verified_blocks": 0,
+            "distribution_queries": 24,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 322
+          },
+          "draft_compute": {
+            "forward_calls": 21,
+            "prefill_forwards": 1,
+            "decode_forwards": 20,
+            "full_recompute_forwards": 0,
+            "input_tokens": 27,
+            "verified_blocks": 0,
+            "distribution_queries": 21,
+            "cache_crops": 1,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 265
+          }
+        },
+        {
+          "seed": 19,
+          "elapsed_seconds": 0.21109221300139325,
+          "generated_tokens": 24,
+          "tokens_per_second": 113.6943881479967,
+          "sampling": {
+            "tokens": [
+              43,
+              50,
+              34,
+              32,
+              16,
+              16,
+              20,
+              17,
+              7,
+              4,
+              12,
+              34,
+              25,
+              46,
+              47,
+              25,
+              41,
+              10,
+              34,
+              47,
+              51,
+              25,
+              0,
+              28
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 43,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 50,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 34,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 32,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 16,
+                "position": 4
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 16,
+                "position": 5
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 20,
+                "position": 6
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 17,
+                "position": 7
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 7,
+                "position": 8
+              },
+              {
+                "kind": "target_bonus",
+                "token": 4,
+                "position": 9
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 12,
+                "position": 10
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 34,
+                "position": 11
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 25,
+                "position": 12
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 46,
+                "position": 13
+              },
+              {
+                "kind": "target_bonus",
+                "token": 47,
+                "position": 14
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 25,
+                "position": 15
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 41,
+                "position": 16
+              },
+              {
+                "kind": "target_residual",
+                "token": 10,
+                "position": 17
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 34,
+                "position": 18
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 47,
+                "position": 19
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 51,
+                "position": 20
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 25,
+                "position": 21
+              },
+              {
+                "kind": "target_bonus",
+                "token": 0,
+                "position": 22
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 28,
+                "position": 23
+              }
+            ],
+            "draft_calls": 21,
+            "target_calls": 24,
+            "proposed_tokens": 21,
+            "verified_tokens": 20,
+            "accepted_tokens": 19,
+            "rejected_tokens": 1,
+            "stop_reason": "max_new_tokens",
+            "accepted_per_proposed": 0.9047619047619048,
+            "accepted_per_verified": 0.95
+          },
+          "target_compute": {
+            "forward_calls": 24,
+            "prefill_forwards": 1,
+            "decode_forwards": 23,
+            "full_recompute_forwards": 0,
+            "input_tokens": 26,
+            "verified_blocks": 0,
+            "distribution_queries": 24,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 322
+          },
+          "draft_compute": {
+            "forward_calls": 21,
+            "prefill_forwards": 1,
+            "decode_forwards": 20,
+            "full_recompute_forwards": 0,
+            "input_tokens": 27,
+            "verified_blocks": 0,
+            "distribution_queries": 21,
+            "cache_crops": 1,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 281
+          }
+        },
+        {
+          "seed": 20,
+          "elapsed_seconds": 0.20431983300113643,
+          "generated_tokens": 24,
+          "tokens_per_second": 117.4628994526758,
+          "sampling": {
+            "tokens": [
+              57,
+              44,
+              49,
+              58,
+              36,
+              10,
+              26,
+              63,
+              7,
+              19,
+              57,
+              21,
+              27,
+              39,
+              2,
+              6,
+              12,
+              43,
+              18,
+              44,
+              54,
+              14,
+              14,
+              0
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 57,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 44,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 49,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 58,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 36,
+                "position": 4
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 10,
+                "position": 5
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 26,
+                "position": 6
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 63,
+                "position": 7
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 7,
+                "position": 8
+              },
+              {
+                "kind": "target_bonus",
+                "token": 19,
+                "position": 9
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 57,
+                "position": 10
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 21,
+                "position": 11
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 27,
+                "position": 12
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 39,
+                "position": 13
+              },
+              {
+                "kind": "target_bonus",
+                "token": 2,
+                "position": 14
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 6,
+                "position": 15
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 12,
+                "position": 16
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 43,
+                "position": 17
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 18,
+                "position": 18
+              },
+              {
+                "kind": "target_bonus",
+                "token": 44,
+                "position": 19
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 54,
+                "position": 20
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 14,
+                "position": 21
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 14,
+                "position": 22
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 0,
+                "position": 23
+              }
+            ],
+            "draft_calls": 20,
+            "target_calls": 24,
+            "proposed_tokens": 20,
+            "verified_tokens": 20,
+            "accepted_tokens": 20,
+            "rejected_tokens": 0,
+            "stop_reason": "max_new_tokens",
+            "accepted_per_proposed": 1.0,
+            "accepted_per_verified": 1.0
+          },
+          "target_compute": {
+            "forward_calls": 24,
+            "prefill_forwards": 1,
+            "decode_forwards": 23,
+            "full_recompute_forwards": 0,
+            "input_tokens": 26,
+            "verified_blocks": 0,
+            "distribution_queries": 24,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 322
+          },
+          "draft_compute": {
+            "forward_calls": 20,
+            "prefill_forwards": 1,
+            "decode_forwards": 19,
+            "full_recompute_forwards": 0,
+            "input_tokens": 26,
+            "verified_blocks": 0,
+            "distribution_queries": 20,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 264
+          }
+        },
+        {
+          "seed": 21,
+          "elapsed_seconds": 0.21753809099936916,
+          "generated_tokens": 24,
+          "tokens_per_second": 110.32550616650211,
+          "sampling": {
+            "tokens": [
+              10,
+              44,
+              41,
+              30,
+              32,
+              15,
+              0,
+              23,
+              37,
+              2,
+              63,
+              47,
+              55,
+              39,
+              61,
+              41,
+              35,
+              18,
+              49,
+              13,
+              61,
+              57,
+              7,
+              30
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 10,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 44,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 41,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 30,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 32,
+                "position": 4
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 15,
+                "position": 5
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 0,
+                "position": 6
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 23,
+                "position": 7
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 37,
+                "position": 8
+              },
+              {
+                "kind": "target_bonus",
+                "token": 2,
+                "position": 9
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 63,
+                "position": 10
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 47,
+                "position": 11
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 55,
+                "position": 12
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 39,
+                "position": 13
+              },
+              {
+                "kind": "target_bonus",
+                "token": 61,
+                "position": 14
+              },
+              {
+                "kind": "target_residual",
+                "token": 41,
+                "position": 15
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 35,
+                "position": 16
+              },
+              {
+                "kind": "target_residual",
+                "token": 18,
+                "position": 17
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 49,
+                "position": 18
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 13,
+                "position": 19
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 61,
+                "position": 20
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 57,
+                "position": 21
+              },
+              {
+                "kind": "target_bonus",
+                "token": 7,
+                "position": 22
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 30,
+                "position": 23
+              }
+            ],
+            "draft_calls": 25,
+            "target_calls": 24,
+            "proposed_tokens": 25,
+            "verified_tokens": 20,
+            "accepted_tokens": 18,
+            "rejected_tokens": 2,
+            "stop_reason": "max_new_tokens",
+            "accepted_per_proposed": 0.72,
+            "accepted_per_verified": 0.9
+          },
+          "target_compute": {
+            "forward_calls": 24,
+            "prefill_forwards": 1,
+            "decode_forwards": 23,
+            "full_recompute_forwards": 0,
+            "input_tokens": 26,
+            "verified_blocks": 0,
+            "distribution_queries": 24,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 322
+          },
+          "draft_compute": {
+            "forward_calls": 25,
+            "prefill_forwards": 1,
+            "decode_forwards": 24,
+            "full_recompute_forwards": 0,
+            "input_tokens": 31,
+            "verified_blocks": 0,
+            "distribution_queries": 25,
+            "cache_crops": 2,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 359
+          }
+        }
+      ],
+      "same_tokens_as_serial": true,
+      "observed_median_time_ratio_vs_serial": 1.433374277470708
+    },
+    "cached_block": {
+      "median_seconds": 0.10977582600025926,
+      "median_tokens_per_second": 218.6273688338571,
+      "trials": [
+        {
+          "seed": 17,
+          "elapsed_seconds": 0.02181781699982821,
+          "generated_tokens": 5,
+          "tokens_per_second": 229.17049859018294,
+          "sampling": {
+            "tokens": [
+              33,
+              51,
+              61,
+              18,
+              1
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 33,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 51,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 61,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 18,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 1,
+                "position": 4
+              }
+            ],
+            "draft_calls": 4,
+            "target_calls": 1,
+            "proposed_tokens": 4,
+            "verified_tokens": 4,
+            "accepted_tokens": 4,
+            "rejected_tokens": 0,
+            "stop_reason": "stop_token",
+            "accepted_per_proposed": 1.0,
+            "accepted_per_verified": 1.0
+          },
+          "target_compute": {
+            "forward_calls": 1,
+            "prefill_forwards": 1,
+            "decode_forwards": 0,
+            "full_recompute_forwards": 0,
+            "input_tokens": 7,
+            "verified_blocks": 1,
+            "distribution_queries": 0,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 0
+          },
+          "draft_compute": {
+            "forward_calls": 4,
+            "prefill_forwards": 1,
+            "decode_forwards": 3,
+            "full_recompute_forwards": 0,
+            "input_tokens": 6,
+            "verified_blocks": 0,
+            "distribution_queries": 4,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 12
+          }
+        },
+        {
+          "seed": 18,
+          "elapsed_seconds": 0.09766294499968353,
+          "generated_tokens": 24,
+          "tokens_per_second": 245.74315263662967,
+          "sampling": {
+            "tokens": [
+              11,
+              42,
+              21,
+              12,
+              16,
+              16,
+              43,
+              19,
+              15,
+              46,
+              37,
+              13,
+              18,
+              0,
+              62,
+              14,
+              47,
+              38,
+              19,
+              7,
+              31,
+              59,
+              12,
+              43
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 11,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 42,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 21,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 12,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 16,
+                "position": 4
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 16,
+                "position": 5
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 43,
+                "position": 6
+              },
+              {
+                "kind": "target_residual",
+                "token": 19,
+                "position": 7
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 15,
+                "position": 8
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 46,
+                "position": 9
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 37,
+                "position": 10
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 13,
+                "position": 11
+              },
+              {
+                "kind": "target_bonus",
+                "token": 18,
+                "position": 12
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 0,
+                "position": 13
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 62,
+                "position": 14
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 14,
+                "position": 15
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 47,
+                "position": 16
+              },
+              {
+                "kind": "target_bonus",
+                "token": 38,
+                "position": 17
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 19,
+                "position": 18
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 7,
+                "position": 19
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 31,
+                "position": 20
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 59,
+                "position": 21
+              },
+              {
+                "kind": "target_bonus",
+                "token": 12,
+                "position": 22
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 43,
+                "position": 23
+              }
+            ],
+            "draft_calls": 21,
+            "target_calls": 6,
+            "proposed_tokens": 21,
+            "verified_tokens": 20,
+            "accepted_tokens": 19,
+            "rejected_tokens": 1,
+            "stop_reason": "max_new_tokens",
+            "accepted_per_proposed": 0.9047619047619048,
+            "accepted_per_verified": 0.95
+          },
+          "target_compute": {
+            "forward_calls": 6,
+            "prefill_forwards": 1,
+            "decode_forwards": 5,
+            "full_recompute_forwards": 0,
+            "input_tokens": 29,
+            "verified_blocks": 6,
+            "distribution_queries": 0,
+            "cache_crops": 2,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 77
+          },
+          "draft_compute": {
+            "forward_calls": 21,
+            "prefill_forwards": 1,
+            "decode_forwards": 20,
+            "full_recompute_forwards": 0,
+            "input_tokens": 27,
+            "verified_blocks": 0,
+            "distribution_queries": 21,
+            "cache_crops": 1,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 265
+          }
+        },
+        {
+          "seed": 19,
+          "elapsed_seconds": 0.11709969600087788,
+          "generated_tokens": 24,
+          "tokens_per_second": 204.95356366954252,
+          "sampling": {
+            "tokens": [
+              43,
+              50,
+              34,
+              32,
+              16,
+              16,
+              20,
+              17,
+              7,
+              4,
+              12,
+              34,
+              25,
+              46,
+              47,
+              25,
+              41,
+              10,
+              34,
+              47,
+              51,
+              25,
+              0,
+              28
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 43,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 50,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 34,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 32,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 16,
+                "position": 4
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 16,
+                "position": 5
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 20,
+                "position": 6
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 17,
+                "position": 7
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 7,
+                "position": 8
+              },
+              {
+                "kind": "target_bonus",
+                "token": 4,
+                "position": 9
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 12,
+                "position": 10
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 34,
+                "position": 11
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 25,
+                "position": 12
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 46,
+                "position": 13
+              },
+              {
+                "kind": "target_bonus",
+                "token": 47,
+                "position": 14
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 25,
+                "position": 15
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 41,
+                "position": 16
+              },
+              {
+                "kind": "target_residual",
+                "token": 10,
+                "position": 17
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 34,
+                "position": 18
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 47,
+                "position": 19
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 51,
+                "position": 20
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 25,
+                "position": 21
+              },
+              {
+                "kind": "target_bonus",
+                "token": 0,
+                "position": 22
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 28,
+                "position": 23
+              }
+            ],
+            "draft_calls": 21,
+            "target_calls": 6,
+            "proposed_tokens": 21,
+            "verified_tokens": 20,
+            "accepted_tokens": 19,
+            "rejected_tokens": 1,
+            "stop_reason": "max_new_tokens",
+            "accepted_per_proposed": 0.9047619047619048,
+            "accepted_per_verified": 0.95
+          },
+          "target_compute": {
+            "forward_calls": 6,
+            "prefill_forwards": 1,
+            "decode_forwards": 5,
+            "full_recompute_forwards": 0,
+            "input_tokens": 29,
+            "verified_blocks": 6,
+            "distribution_queries": 0,
+            "cache_crops": 2,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 81
+          },
+          "draft_compute": {
+            "forward_calls": 21,
+            "prefill_forwards": 1,
+            "decode_forwards": 20,
+            "full_recompute_forwards": 0,
+            "input_tokens": 27,
+            "verified_blocks": 0,
+            "distribution_queries": 21,
+            "cache_crops": 1,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 281
+          }
+        },
+        {
+          "seed": 20,
+          "elapsed_seconds": 0.10977582600025926,
+          "generated_tokens": 24,
+          "tokens_per_second": 218.6273688338571,
+          "sampling": {
+            "tokens": [
+              57,
+              44,
+              49,
+              58,
+              36,
+              10,
+              26,
+              63,
+              7,
+              19,
+              57,
+              21,
+              27,
+              39,
+              2,
+              6,
+              12,
+              43,
+              18,
+              44,
+              54,
+              14,
+              14,
+              0
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 57,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 44,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 49,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 58,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 36,
+                "position": 4
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 10,
+                "position": 5
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 26,
+                "position": 6
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 63,
+                "position": 7
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 7,
+                "position": 8
+              },
+              {
+                "kind": "target_bonus",
+                "token": 19,
+                "position": 9
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 57,
+                "position": 10
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 21,
+                "position": 11
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 27,
+                "position": 12
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 39,
+                "position": 13
+              },
+              {
+                "kind": "target_bonus",
+                "token": 2,
+                "position": 14
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 6,
+                "position": 15
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 12,
+                "position": 16
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 43,
+                "position": 17
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 18,
+                "position": 18
+              },
+              {
+                "kind": "target_bonus",
+                "token": 44,
+                "position": 19
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 54,
+                "position": 20
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 14,
+                "position": 21
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 14,
+                "position": 22
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 0,
+                "position": 23
+              }
+            ],
+            "draft_calls": 20,
+            "target_calls": 5,
+            "proposed_tokens": 20,
+            "verified_tokens": 20,
+            "accepted_tokens": 20,
+            "rejected_tokens": 0,
+            "stop_reason": "max_new_tokens",
+            "accepted_per_proposed": 1.0,
+            "accepted_per_verified": 1.0
+          },
+          "target_compute": {
+            "forward_calls": 5,
+            "prefill_forwards": 1,
+            "decode_forwards": 4,
+            "full_recompute_forwards": 0,
+            "input_tokens": 27,
+            "verified_blocks": 5,
+            "distribution_queries": 0,
+            "cache_crops": 1,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 58
+          },
+          "draft_compute": {
+            "forward_calls": 20,
+            "prefill_forwards": 1,
+            "decode_forwards": 19,
+            "full_recompute_forwards": 0,
+            "input_tokens": 26,
+            "verified_blocks": 0,
+            "distribution_queries": 20,
+            "cache_crops": 0,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 264
+          }
+        },
+        {
+          "seed": 21,
+          "elapsed_seconds": 0.14474992999930691,
+          "generated_tokens": 24,
+          "tokens_per_second": 165.80318899024624,
+          "sampling": {
+            "tokens": [
+              10,
+              44,
+              41,
+              30,
+              32,
+              15,
+              0,
+              23,
+              37,
+              2,
+              63,
+              47,
+              55,
+              39,
+              61,
+              41,
+              35,
+              18,
+              49,
+              13,
+              61,
+              57,
+              7,
+              30
+            ],
+            "events": [
+              {
+                "kind": "accepted_draft",
+                "token": 10,
+                "position": 0
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 44,
+                "position": 1
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 41,
+                "position": 2
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 30,
+                "position": 3
+              },
+              {
+                "kind": "target_bonus",
+                "token": 32,
+                "position": 4
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 15,
+                "position": 5
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 0,
+                "position": 6
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 23,
+                "position": 7
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 37,
+                "position": 8
+              },
+              {
+                "kind": "target_bonus",
+                "token": 2,
+                "position": 9
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 63,
+                "position": 10
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 47,
+                "position": 11
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 55,
+                "position": 12
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 39,
+                "position": 13
+              },
+              {
+                "kind": "target_bonus",
+                "token": 61,
+                "position": 14
+              },
+              {
+                "kind": "target_residual",
+                "token": 41,
+                "position": 15
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 35,
+                "position": 16
+              },
+              {
+                "kind": "target_residual",
+                "token": 18,
+                "position": 17
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 49,
+                "position": 18
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 13,
+                "position": 19
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 61,
+                "position": 20
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 57,
+                "position": 21
+              },
+              {
+                "kind": "target_bonus",
+                "token": 7,
+                "position": 22
+              },
+              {
+                "kind": "accepted_draft",
+                "token": 30,
+                "position": 23
+              }
+            ],
+            "draft_calls": 25,
+            "target_calls": 7,
+            "proposed_tokens": 25,
+            "verified_tokens": 20,
+            "accepted_tokens": 18,
+            "rejected_tokens": 2,
+            "stop_reason": "max_new_tokens",
+            "accepted_per_proposed": 0.72,
+            "accepted_per_verified": 0.9
+          },
+          "target_compute": {
+            "forward_calls": 7,
+            "prefill_forwards": 1,
+            "decode_forwards": 6,
+            "full_recompute_forwards": 0,
+            "input_tokens": 34,
+            "verified_blocks": 7,
+            "distribution_queries": 0,
+            "cache_crops": 3,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 99
+          },
+          "draft_compute": {
+            "forward_calls": 25,
+            "prefill_forwards": 1,
+            "decode_forwards": 24,
+            "full_recompute_forwards": 0,
+            "input_tokens": 31,
+            "verified_blocks": 0,
+            "distribution_queries": 25,
+            "cache_crops": 2,
+            "cache_resets": 0,
+            "reused_prefix_tokens": 359
+          }
+        }
+      ],
+      "same_tokens_as_serial": true,
+      "observed_median_time_ratio_vs_serial": 2.6678623488585544
+    }
+  },
+  "limits": [
+    "Hardware warmups are excluded; every request starts with an empty cache and includes prefill.",
+    "Loading checkpoints and resetting caches are outside measured time; Python sampling and CPU probability transfer are included.",
+    "Time ratios apply only to this run, checkpoints, hardware, and prompt; no general GPU speedup is implied."
+  ],
+  "fixture": {
+    "target": {
+      "seed": 101,
+      "layers": 2,
+      "hidden": 32
+    },
+    "draft": {
+      "seed": 202,
+      "layers": 1,
+      "hidden": 16
+    },
+    "vocabulary": 64,
+    "context": 128,
+    "heads": 2
+  },
+  "trained_model_quality_evaluated": false
+}
