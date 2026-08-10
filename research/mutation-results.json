@@ -1,0 +1,29 @@
+{
+  "method": "temporary copied source mutations; original source unchanged",
+  "mutations": [
+    {
+      "mutation": "accept-every-proposal",
+      "target": "src/speculative_decoding/sampling.py",
+      "test_file": "test_sampling.py",
+      "killed": true,
+      "returncode": 1,
+      "evidence": "1rx/project/tests/test_sampling.py\", line 107, in test_empirical_marginals_and_joint\n    self.assertLess(max(case[\"max_absolute_error\"] for case in result[\"cases\"]), 0.05)\nAssertionError: 1.0 not less than 0.05\n\n======================================================================\nFAIL: test_stop_on_residual_token (test_sampling.SamplingTests.test_stop_on_residual_token)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmpajf7u1rx/project/tests/test_sampling.py\", line 88, in test_stop_on_residual_token\n    self.assertEqual(result.tokens, [0])\nAssertionError: Lists differ: [1, 1, 1, 1, 0] != [0]\n\nFirst differing element 0:\n1\n0\n\nFirst list contains 4 additional elements.\nFirst extra element 1:\n1\n\n- [1, 1, 1, 1, 0]\n+ [0]\n\n======================================================================\nFAIL: test_target_conditional_uses_accepted_history (test_sampling.SamplingTests.test_target_conditional_uses_accepted_history)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmpajf7u1rx/project/tests/test_sampling.py\", line 78, in test_target_conditional_uses_accepted_history\n    self.assertEqual(speculative_sample(target, draft, max_new_tokens=8).tokens, [0, 1] * 4)\nAssertionError: Lists differ: [1, 1, 0, 0, 1, 1, 1, 1] != [0, 1, 0, 1, 0, 1, 0, 1]\n\nFirst differing element 0:\n1\n0\n\n- [1, 1, 0, 0, 1, 1, 1, 1]\n+ [0, 1, 0, 1, 0, 1, 0, 1]\n\n----------------------------------------------------------------------\nRan 17 tests in 2.360s\n\nFAILED (failures=4)\n"
+    },
+    {
+      "mutation": "reverse-residual",
+      "target": "src/speculative_decoding/sampling.py",
+      "test_file": "test_sampling.py",
+      "killed": true,
+      "returncode": 1,
+      "evidence": "irical_marginals_and_joint\n    self.assertLess(max(case[\"max_absolute_error\"] for case in result[\"cases\"]), 0.05)\nAssertionError: 1.0 not less than 0.05\n\n======================================================================\nFAIL: test_stop_on_residual_token (test_sampling.SamplingTests.test_stop_on_residual_token)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmppjiqzvi1/project/tests/test_sampling.py\", line 88, in test_stop_on_residual_token\n    self.assertEqual(result.tokens, [0])\nAssertionError: Lists differ: [1, 1, 1, 1, 1, 1, 1, 1] != [0]\n\nFirst differing element 0:\n1\n0\n\nFirst list contains 7 additional elements.\nFirst extra element 1:\n1\n\n- [1, 1, 1, 1, 1, 1, 1, 1]\n+ [0]\n\n======================================================================\nFAIL: test_target_conditional_uses_accepted_history (test_sampling.SamplingTests.test_target_conditional_uses_accepted_history)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmppjiqzvi1/project/tests/test_sampling.py\", line 78, in test_target_conditional_uses_accepted_history\n    self.assertEqual(speculative_sample(target, draft, max_new_tokens=8).tokens, [0, 1] * 4)\nAssertionError: Lists differ: [1, 1, 0, 1, 1, 0, 1, 1] != [0, 1, 0, 1, 0, 1, 0, 1]\n\nFirst differing element 0:\n1\n0\n\n- [1, 1, 0, 1, 1, 0, 1, 1]\n?              ---   ---\n\n+ [0, 1, 0, 1, 0, 1, 0, 1]\n?  +++   +++\n\n\n----------------------------------------------------------------------\nRan 17 tests in 2.504s\n\nFAILED (failures=4)\n"
+    },
+    {
+      "mutation": "ignore-stop-token",
+      "target": "src/speculative_decoding/sampling.py",
+      "test_file": "test_joint_and_contracts.py",
+      "killed": true,
+      "returncode": 1,
+      "evidence": "======================================================================\nFAIL: test_speculative_law_matches_all_paths_across_windows (test_joint_and_contracts.ExactJointTests.test_speculative_law_matches_all_paths_across_windows) (window=3, stop=1)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmpfotl3d9u/project/tests/test_joint_and_contracts.py\", line 47, in test_speculative_law_matches_all_paths_across_windows\n    self.assertEqual(result[\"illegal_output_count\"], 0)\nAssertionError: 2108 != 0\n\n======================================================================\nFAIL: test_stop_on_bonus_and_exact_context_boundary (test_joint_and_contracts.NumericAndRandomTests.test_stop_on_bonus_and_exact_context_boundary)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmpfotl3d9u/project/tests/test_joint_and_contracts.py\", line 104, in test_stop_on_bonus_and_exact_context_boundary\n    self.assertEqual(result.tokens, [0, 1])\nAssertionError: Lists differ: [0, 1, 0, 1] != [0, 1]\n\nFirst list contains 2 additional elements.\nFirst extra element 2:\n0\n\n- [0, 1, 0, 1]\n+ [0, 1]\n\n----------------------------------------------------------------------\nRan 12 tests in 4.516s\n\nFAILED (failures=2)\n"
+    }
+  ]
+}
