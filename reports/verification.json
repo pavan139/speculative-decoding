@@ -1,0 +1,1237 @@
+{
+  "schema_version": 2,
+  "generated_at_utc": "2026-11-15T04:19:57.827183+00:00",
+  "repository": "speculative-decoding",
+  "source_sha256": "91b37b5eaa022003e3cc03172d02bbe1247b45e90c88118b2e37a82d33e1719b",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "scope": "software_contracts_and_labeled_synthetic_experiments",
+  "tests_discovered": 40,
+  "tests_skipped": 0,
+  "tests_executed": 40,
+  "external_provider_calls": false,
+  "full_model_accuracy_benchmark_run": false,
+  "passed": true,
+  "checks": [
+    {
+      "name": "metadata_and_documentation",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "lint",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "All checks passed!\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "checks",
+        "bench"
+      ],
+      "seconds": 0.067163
+    },
+    {
+      "name": "format",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "16 files already formatted\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "checks",
+        "bench"
+      ],
+      "seconds": 0.031904
+    },
+    {
+      "name": "compile",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "checks",
+        "bench"
+      ],
+      "seconds": 0.084405
+    },
+    {
+      "name": "unit_tests",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "",
+      "stdout_truncated": false,
+      "stderr": "test_block_empirical_stopped_joint_matches_independent_oracle (test_block.BlockSamplerTests.test_block_empirical_stopped_joint_matches_independent_oracle) ... ok\ntest_invalid_block_shape_vocabulary_and_probabilities (test_block.BlockSamplerTests.test_invalid_block_shape_vocabulary_and_probabilities) ... ok\ntest_rejection_at_first_middle_and_last_draft_positions (test_block.BlockSamplerTests.test_rejection_at_first_middle_and_last_draft_positions) ... ok\ntest_serial_and_block_paths_are_identical_across_random_tables (test_block.BlockSamplerTests.test_serial_and_block_paths_are_identical_across_random_tables) ... ok\ntest_stop_bonus_disjoint_support_and_zero_output (test_block.BlockSamplerTests.test_stop_bonus_disjoint_support_and_zero_output) ... ok\ntest_target_calls_count_blocks_and_commit_final_prefix (test_block.BlockSamplerTests.test_target_calls_count_blocks_and_commit_final_prefix) ... ok\ntest_enumeration_is_bounded (test_joint_and_contracts.ExactJointTests.test_enumeration_is_bounded) ... ok\ntest_independently_computed_history_law (test_joint_and_contracts.ExactJointTests.test_independently_computed_history_law) ... ok\ntest_speculative_law_matches_all_paths_across_windows (test_joint_and_contracts.ExactJointTests.test_speculative_law_matches_all_paths_across_windows) ... ok\ntest_variable_length_stop_law_and_prefix_conditioning (test_joint_and_contracts.ExactJointTests.test_variable_length_stop_law_and_prefix_conditioning) ... ok\ntest_zero_horizon_and_sparse_support (test_joint_and_contracts.ExactJointTests.test_zero_horizon_and_sparse_support) ... ok\ntest_extreme_nonzero_probabilities_and_zero_draw (test_joint_and_contracts.NumericAndRandomTests.test_extreme_nonzero_probabilities_and_zero_draw) ... ok\ntest_global_rng_unchanged_and_strict_seed (test_joint_and_contracts.NumericAndRandomTests.test_global_rng_unchanged_and_strict_seed) ... ok\ntest_invalid_backend_metadata_even_for_zero_output (test_joint_and_contracts.NumericAndRandomTests.test_invalid_backend_metadata_even_for_zero_output) ... ok\ntest_markov_parameters_are_copied_into_immutable_normalized_tuples (test_joint_and_contracts.NumericAndRandomTests.test_markov_parameters_are_copied_into_immutable_normalized_tuples) ... ok\ntest_normalization_within_declared_tolerance (test_joint_and_contracts.NumericAndRandomTests.test_normalization_within_declared_tolerance) ... ok\ntest_numeric_contract_rejects_strings_boolean_overflow (test_joint_and_contracts.NumericAndRandomTests.test_numeric_contract_rejects_strings_boolean_overflow) ... ok\ntest_stop_on_bonus_and_exact_context_boundary (test_joint_and_contracts.NumericAndRandomTests.test_stop_on_bonus_and_exact_context_boundary) ... ok\ntest_all_block_rows_equal_full_prefix_across_forks_and_rollbacks (test_optional_cached_hf.CachedHFTests.test_all_block_rows_equal_full_prefix_across_forks_and_rollbacks) ... ok\ntest_benchmark_warmups_cold_request_counters_and_shared_weights (test_optional_cached_hf.CachedHFTests.test_benchmark_warmups_cold_request_counters_and_shared_weights) ... ok\ntest_exact_context_invalid_ids_and_cache_reset_after_forward_fault (test_optional_cached_hf.CachedHFTests.test_exact_context_invalid_ids_and_cache_reset_after_forward_fault) ... ok\ntest_seeded_serial_cached_and_block_sequences_match (test_optional_cached_hf.CachedHFTests.test_seeded_serial_cached_and_block_sequences_match) ... ok\ntest_tiny_checkpoint_probabilities_context_and_sampler (test_optional_hf.LocalHFTests.test_tiny_checkpoint_probabilities_context_and_sampler) ... ok\ntest_bad_probabilities_rejected (test_sampling.SamplingTests.test_bad_probabilities_rejected) ... ok\ntest_disjoint_support_uses_residual (test_sampling.SamplingTests.test_disjoint_support_uses_residual) ... ok\ntest_empirical_marginals_and_joint (test_sampling.SamplingTests.test_empirical_marginals_and_joint) ... ok\ntest_explicit_context_budget (test_sampling.SamplingTests.test_explicit_context_budget) ... ok\ntest_full_backend_vocabulary_validated (test_sampling.SamplingTests.test_full_backend_vocabulary_validated) ... ok\ntest_greedy_is_deterministic_and_separate (test_sampling.SamplingTests.test_greedy_is_deterministic_and_separate) ... ok\ntest_hard_token_budget (test_sampling.SamplingTests.test_hard_token_budget) ... ok\ntest_identical_models_accept_every_proposal (test_sampling.SamplingTests.test_identical_models_accept_every_proposal) ... ok\ntest_invalid_budgets (test_sampling.SamplingTests.test_invalid_budgets) ... ok\ntest_invalid_prefix (test_sampling.SamplingTests.test_invalid_prefix) ... ok\ntest_same_seed_reproducible (test_sampling.SamplingTests.test_same_seed_reproducible) ... ok\ntest_stop_on_accepted_token (test_sampling.SamplingTests.test_stop_on_accepted_token) ... ok\ntest_stop_on_residual_token (test_sampling.SamplingTests.test_stop_on_residual_token) ... ok\ntest_target_conditional_uses_accepted_history (test_sampling.SamplingTests.test_target_conditional_uses_accepted_history) ... ok\ntest_transition_shape_validation (test_sampling.SamplingTests.test_transition_shape_validation) ... ok\ntest_vocabulary_mismatch (test_sampling.SamplingTests.test_vocabulary_mismatch) ... ok\ntest_zero_probability_token_is_never_sampled (test_sampling.SamplingTests.test_zero_probability_token_is_never_sampled) ... ok\n\n----------------------------------------------------------------------\nRan 40 tests in 14.853s\n\nOK\n",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "checks",
+        "-v"
+      ],
+      "seconds": 16.021815
+    },
+    {
+      "name": "demo",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "{\n  \"backend\": \"synthetic_markov\",\n  \"learned_model_evaluated\": false,\n  \"sampling\": {\n    \"tokens\": [\n      0,\n      0,\n      0,\n      0,\n      0,\n      1,\n      2,\n      0,\n      0,\n      0,\n      0,\n      1,\n      1,\n      0,\n      0,\n      1,\n      0,\n      0,\n      1,\n      0,\n      0,\n      0,\n      1,\n      0\n    ],\n    \"events\": [\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 0\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 1\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 2\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 0,\n        \"position\": 3\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 4\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 1,\n        \"position\": 5\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 2,\n        \"position\": 6\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 7\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 8\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 9\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 10\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 1,\n        \"position\": 11\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 1,\n        \"position\": 12\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 13\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 14\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 1,\n        \"position\": 15\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 0,\n        \"position\": 16\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 17\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 1,\n        \"position\": 18\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 0,\n        \"position\": 19\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 20\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 21\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 1,\n        \"position\": 22\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 0,\n        \"position\": 23\n      }\n    ],\n    \"draft_calls\": 53,\n    \"target_calls\": 24,\n    \"proposed_tokens\": 53,\n    \"verified_tokens\": 24,\n    \"accepted_tokens\": 11,\n    \"rejected_tokens\": 13,\n    \"stop_reason\": \"max_new_tokens\",\n    \"accepted_per_proposed\": 0.20754716981132076,\n    \"accepted_per_verified\": 0.4583333333333333\n  }\n}\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "speculative_decoding",
+        "demo",
+        "--output",
+        "/tmp/cli-reports-_7841r46/demo.json"
+      ],
+      "seconds": 0.144429,
+      "report": {
+        "backend": "synthetic_markov",
+        "learned_model_evaluated": false,
+        "sampling": {
+          "tokens": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "events": [
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 0
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 1
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 2
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 0,
+              "position": 3
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 4
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 1,
+              "position": 5
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 2,
+              "position": 6
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 7
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 8
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 9
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 10
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 1,
+              "position": 11
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 1,
+              "position": 12
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 13
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 14
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 1,
+              "position": 15
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 0,
+              "position": 16
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 17
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 1,
+              "position": 18
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 0,
+              "position": 19
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 20
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 21
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 1,
+              "position": 22
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 0,
+              "position": 23
+            }
+          ],
+          "draft_calls": 53,
+          "target_calls": 24,
+          "proposed_tokens": 53,
+          "verified_tokens": 24,
+          "accepted_tokens": 11,
+          "rejected_tokens": 13,
+          "stop_reason": "max_new_tokens",
+          "accepted_per_proposed": 0.20754716981132076,
+          "accepted_per_verified": 0.4583333333333333
+        }
+      }
+    },
+    {
+      "name": "evaluate",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"experiment\": \"synthetic_probability_correctness\",\n  \"model_backend\": \"exact_markov_tables\",\n  \"learned_model_evaluated\": false,\n  \"seed\": 17,\n  \"python\": \"3.12.14\",\n  \"case_count\": 13,\n  \"samples_per_case\": 3000,\n  \"cases\": [\n    {\n      \"id\": \"distribution-00\",\n      \"target\": [\n        0.5,\n        0.5\n      ],\n      \"draft\": [\n        0.5,\n        0.5\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        1525,\n        1475\n      ],\n      \"empirical\": [\n        0.5083333333333333,\n        0.49166666666666664\n      ],\n      \"max_absolute_error\": 0.00833333333333336,\n      \"accepted_draft_tokens\": 3000,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-01\",\n      \"target\": [\n        0.9,\n        0.1\n      ],\n      \"draft\": [\n        0.1,\n        0.9\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        2706,\n        294\n      ],\n      \"empirical\": [\n        0.902,\n        0.098\n      ],\n      \"max_absolute_error\": 0.0020000000000000018,\n      \"accepted_draft_tokens\": 601,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-02\",\n      \"target\": [\n        1.0,\n        0.0\n      ],\n      \"draft\": [\n        0.0,\n        1.0\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        3000,\n        0\n      ],\n      \"empirical\": [\n        1.0,\n        0.0\n      ],\n      \"max_absolute_error\": 0.0,\n      \"accepted_draft_tokens\": 0,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-03\",\n      \"target\": [\n        0.0,\n        1.0\n      ],\n      \"draft\": [\n        1.0,\n        0.0\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        0,\n        3000\n      ],\n      \"empirical\": [\n        0.0,\n        1.0\n      ],\n      \"max_absolute_error\": 0.0,\n      \"accepted_draft_tokens\": 0,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-04\",\n      \"target\": [\n        0.7,\n        0.3\n      ],\n      \"draft\": [\n        1.0,\n        0.0\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        2090,\n        910\n      ],\n      \"empirical\": [\n        0.6966666666666667,\n        0.30333333333333334\n      ],\n      \"max_absolute_error\": 0.003333333333333355,\n      \"accepted_draft_tokens\": 2090,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-05\",\n      \"target\": [\n        0.2,\n        0.8\n      ],\n      \"draft\": [\n        0.0,\n        1.0\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        596,\n        2404\n      ],\n      \"empirical\": [\n        0.19866666666666666,\n        0.8013333333333333\n      ],\n      \"max_absolute_error\": 0.001333333333333353,\n      \"accepted_draft_tokens\": 2404,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-06\",\n      \"target\": [\n        0.1,\n        0.2,\n        0.7\n      ],\n      \"draft\": [\n        0.7,\n        0.2,\n        0.1\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        297,\n        622,\n        2081\n      ],\n      \"empirical\": [\n        0.099,\n        0.20733333333333334,\n        0.6936666666666667\n      ],\n      \"max_absolute_error\": 0.007333333333333331,\n      \"accepted_draft_tokens\": 1180,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-07\",\n      \"target\": [\n        0.0,\n        0.3,\n        0.7\n      ],\n      \"draft\": [\n        0.8,\n        0.2,\n        0.0\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        0,\n        893,\n        2107\n      ],\n      \"empirical\": [\n        0.0,\n        0.2976666666666667,\n        0.7023333333333334\n      ],\n      \"max_absolute_error\": 0.0023333333333334094,\n      \"accepted_draft_tokens\": 589,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-08\",\n      \"target\": [\n        0.3333333333,\n        0.3333333333,\n        0.3333333334\n      ],\n      \"draft\": [\n        0.1,\n        0.8,\n        0.1\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        990,\n        991,\n        1019\n      ],\n      \"empirical\": [\n        0.33,\n        0.3303333333333333,\n        0.3396666666666667\n      ],\n      \"max_absolute_error\": 0.006333333266666685,\n      \"accepted_draft_tokens\": 1592,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-09\",\n      \"target\": [\n        0.99,\n        0.005,\n        0.005\n      ],\n      \"draft\": [\n        0.01,\n        0.49,\n        0.5\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        2975,\n        11,\n        14\n      ],\n      \"empirical\": [\n        0.9916666666666667,\n        0.0036666666666666666,\n        0.004666666666666667\n      ],\n      \"max_absolute_error\": 0.0016666666666667052,\n      \"accepted_draft_tokens\": 74,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-10\",\n      \"target\": [\n        0.1,\n        0.1,\n        0.1,\n        0.7\n      ],\n      \"draft\": [\n        0.25,\n        0.25,\n        0.25,\n        0.25\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        270,\n        310,\n        278,\n        2142\n      ],\n      \"empirical\": [\n        0.09,\n        0.10333333333333333,\n        0.09266666666666666,\n        0.714\n      ],\n      \"max_absolute_error\": 0.014000000000000012,\n      \"accepted_draft_tokens\": 1636,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-11\",\n      \"target\": [\n        0.25,\n        0.25,\n        0.25,\n        0.25\n      ],\n      \"draft\": [\n        0.0,\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        743,\n        739,\n        782,\n        736\n      ],\n      \"empirical\": [\n        0.24766666666666667,\n        0.24633333333333332,\n        0.26066666666666666,\n        0.24533333333333332\n      ],\n      \"max_absolute_error\": 0.010666666666666658,\n      \"accepted_draft_tokens\": 736,\n      \"proposed_draft_tokens\": 3000\n    }\n  ],\n  \"history_case\": {\n    \"counts\": [\n      1439,\n      336,\n      130,\n      1095\n    ],\n    \"expected_joint\": [\n      0.48,\n      0.12,\n      0.04,\n      0.36\n    ],\n    \"samples\": 3000,\n    \"max_absolute_error\": 0.007999999999999993\n  },\n  \"limitations\": [\n    \"Finite Monte Carlo checks are not a proof of implementation correctness.\",\n    \"No HF throughput or speedup was measured; verification calls are serial.\"\n  ]\n}\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "speculative_decoding",
+        "evaluate",
+        "--output",
+        "/tmp/cli-reports-_7841r46/evaluate.json"
+      ],
+      "seconds": 2.252051,
+      "report": {
+        "schema_version": 1,
+        "experiment": "synthetic_probability_correctness",
+        "model_backend": "exact_markov_tables",
+        "learned_model_evaluated": false,
+        "seed": 17,
+        "python": "3.12.14",
+        "case_count": 13,
+        "samples_per_case": 3000,
+        "cases": [
+          {
+            "id": "distribution-00",
+            "target": [
+              0.5,
+              0.5
+            ],
+            "draft": [
+              0.5,
+              0.5
+            ],
+            "samples": 3000,
+            "counts": [
+              1525,
+              1475
+            ],
+            "empirical": [
+              0.5083333333333333,
+              0.49166666666666664
+            ],
+            "max_absolute_error": 0.00833333333333336,
+            "accepted_draft_tokens": 3000,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-01",
+            "target": [
+              0.9,
+              0.1
+            ],
+            "draft": [
+              0.1,
+              0.9
+            ],
+            "samples": 3000,
+            "counts": [
+              2706,
+              294
+            ],
+            "empirical": [
+              0.902,
+              0.098
+            ],
+            "max_absolute_error": 0.0020000000000000018,
+            "accepted_draft_tokens": 601,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-02",
+            "target": [
+              1.0,
+              0.0
+            ],
+            "draft": [
+              0.0,
+              1.0
+            ],
+            "samples": 3000,
+            "counts": [
+              3000,
+              0
+            ],
+            "empirical": [
+              1.0,
+              0.0
+            ],
+            "max_absolute_error": 0.0,
+            "accepted_draft_tokens": 0,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-03",
+            "target": [
+              0.0,
+              1.0
+            ],
+            "draft": [
+              1.0,
+              0.0
+            ],
+            "samples": 3000,
+            "counts": [
+              0,
+              3000
+            ],
+            "empirical": [
+              0.0,
+              1.0
+            ],
+            "max_absolute_error": 0.0,
+            "accepted_draft_tokens": 0,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-04",
+            "target": [
+              0.7,
+              0.3
+            ],
+            "draft": [
+              1.0,
+              0.0
+            ],
+            "samples": 3000,
+            "counts": [
+              2090,
+              910
+            ],
+            "empirical": [
+              0.6966666666666667,
+              0.30333333333333334
+            ],
+            "max_absolute_error": 0.003333333333333355,
+            "accepted_draft_tokens": 2090,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-05",
+            "target": [
+              0.2,
+              0.8
+            ],
+            "draft": [
+              0.0,
+              1.0
+            ],
+            "samples": 3000,
+            "counts": [
+              596,
+              2404
+            ],
+            "empirical": [
+              0.19866666666666666,
+              0.8013333333333333
+            ],
+            "max_absolute_error": 0.001333333333333353,
+            "accepted_draft_tokens": 2404,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-06",
+            "target": [
+              0.1,
+              0.2,
+              0.7
+            ],
+            "draft": [
+              0.7,
+              0.2,
+              0.1
+            ],
+            "samples": 3000,
+            "counts": [
+              297,
+              622,
+              2081
+            ],
+            "empirical": [
+              0.099,
+              0.20733333333333334,
+              0.6936666666666667
+            ],
+            "max_absolute_error": 0.007333333333333331,
+            "accepted_draft_tokens": 1180,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-07",
+            "target": [
+              0.0,
+              0.3,
+              0.7
+            ],
+            "draft": [
+              0.8,
+              0.2,
+              0.0
+            ],
+            "samples": 3000,
+            "counts": [
+              0,
+              893,
+              2107
+            ],
+            "empirical": [
+              0.0,
+              0.2976666666666667,
+              0.7023333333333334
+            ],
+            "max_absolute_error": 0.0023333333333334094,
+            "accepted_draft_tokens": 589,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-08",
+            "target": [
+              0.3333333333,
+              0.3333333333,
+              0.3333333334
+            ],
+            "draft": [
+              0.1,
+              0.8,
+              0.1
+            ],
+            "samples": 3000,
+            "counts": [
+              990,
+              991,
+              1019
+            ],
+            "empirical": [
+              0.33,
+              0.3303333333333333,
+              0.3396666666666667
+            ],
+            "max_absolute_error": 0.006333333266666685,
+            "accepted_draft_tokens": 1592,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-09",
+            "target": [
+              0.99,
+              0.005,
+              0.005
+            ],
+            "draft": [
+              0.01,
+              0.49,
+              0.5
+            ],
+            "samples": 3000,
+            "counts": [
+              2975,
+              11,
+              14
+            ],
+            "empirical": [
+              0.9916666666666667,
+              0.0036666666666666666,
+              0.004666666666666667
+            ],
+            "max_absolute_error": 0.0016666666666667052,
+            "accepted_draft_tokens": 74,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-10",
+            "target": [
+              0.1,
+              0.1,
+              0.1,
+              0.7
+            ],
+            "draft": [
+              0.25,
+              0.25,
+              0.25,
+              0.25
+            ],
+            "samples": 3000,
+            "counts": [
+              270,
+              310,
+              278,
+              2142
+            ],
+            "empirical": [
+              0.09,
+              0.10333333333333333,
+              0.09266666666666666,
+              0.714
+            ],
+            "max_absolute_error": 0.014000000000000012,
+            "accepted_draft_tokens": 1636,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-11",
+            "target": [
+              0.25,
+              0.25,
+              0.25,
+              0.25
+            ],
+            "draft": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "samples": 3000,
+            "counts": [
+              743,
+              739,
+              782,
+              736
+            ],
+            "empirical": [
+              0.24766666666666667,
+              0.24633333333333332,
+              0.26066666666666666,
+              0.24533333333333332
+            ],
+            "max_absolute_error": 0.010666666666666658,
+            "accepted_draft_tokens": 736,
+            "proposed_draft_tokens": 3000
+          }
+        ],
+        "history_case": {
+          "counts": [
+            1439,
+            336,
+            130,
+            1095
+          ],
+          "expected_joint": [
+            0.48,
+            0.12,
+            0.04,
+            0.36
+          ],
+          "samples": 3000,
+          "max_absolute_error": 0.007999999999999993
+        },
+        "limitations": [
+          "Finite Monte Carlo checks are not a proof of implementation correctness.",
+          "No HF throughput or speedup was measured; verification calls are serial."
+        ]
+      }
+    },
+    {
+      "name": "wheel_build",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "Processing /workspace/applied-ai-repositories/speculative-decoding\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: speculative-decoding-lab\n  Building wheel for speculative-decoding-lab (pyproject.toml): started\n  Building wheel for speculative-decoding-lab (pyproject.toml): finished with status 'done'\n  Created wheel for speculative-decoding-lab: filename=speculative_decoding_lab-0.1.0-py3-none-any.whl size=19066 sha256=9fac7eece3bc27a23f75f5a785a3ea253705b12a7e26145d61ba68dd6e040450\n  Stored in directory: /home/agent/.cache/pip/wheels/0f/ad/cd/2dde4ce653dc023a251263336c1aded4b583ecb5cd6689a9e5\nSuccessfully built speculative-decoding-lab\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "pip",
+        "wheel",
+        "--no-deps",
+        "--no-build-isolation",
+        "--no-index",
+        "--wheel-dir",
+        "/tmp/cold-wheel-zb3tt_43/wheels",
+        "."
+      ],
+      "seconds": 1.354664
+    },
+    {
+      "name": "wheel_install",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "Processing ./wheels/speculative_decoding_lab-0.1.0-py3-none-any.whl\nInstalling collected packages: speculative-decoding-lab\nSuccessfully installed speculative-decoding-lab-0.1.0\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/tmp/cold-wheel-zb3tt_43/environment/bin/python",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "--no-index",
+        "/tmp/cold-wheel-zb3tt_43/wheels/speculative_decoding_lab-0.1.0-py3-none-any.whl"
+      ],
+      "seconds": 0.974434
+    },
+    {
+      "name": "wheel_import_origin",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "/tmp/cold-wheel-zb3tt_43/environment/lib/python3.12/site-packages/speculative_decoding/__init__.py\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/tmp/cold-wheel-zb3tt_43/environment/bin/python",
+        "-I",
+        "-c",
+        "import speculative_decoding as module; import sys; from pathlib import Path; assert Path(module.__file__).resolve().is_relative_to(Path(sys.prefix).resolve()); print(module.__file__)"
+      ],
+      "seconds": 0.114811
+    },
+    {
+      "name": "wheel_demo",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "{\n  \"backend\": \"synthetic_markov\",\n  \"learned_model_evaluated\": false,\n  \"sampling\": {\n    \"tokens\": [\n      0,\n      0,\n      0,\n      0,\n      0,\n      1,\n      2,\n      0,\n      0,\n      0,\n      0,\n      1,\n      1,\n      0,\n      0,\n      1,\n      0,\n      0,\n      1,\n      0,\n      0,\n      0,\n      1,\n      0\n    ],\n    \"events\": [\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 0\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 1\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 2\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 0,\n        \"position\": 3\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 4\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 1,\n        \"position\": 5\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 2,\n        \"position\": 6\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 7\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 8\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 9\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 10\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 1,\n        \"position\": 11\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 1,\n        \"position\": 12\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 13\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 14\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 1,\n        \"position\": 15\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 0,\n        \"position\": 16\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 17\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 1,\n        \"position\": 18\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 0,\n        \"position\": 19\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 20\n      },\n      {\n        \"kind\": \"target_residual\",\n        \"token\": 0,\n        \"position\": 21\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 1,\n        \"position\": 22\n      },\n      {\n        \"kind\": \"accepted_draft\",\n        \"token\": 0,\n        \"position\": 23\n      }\n    ],\n    \"draft_calls\": 53,\n    \"target_calls\": 24,\n    \"proposed_tokens\": 53,\n    \"verified_tokens\": 24,\n    \"accepted_tokens\": 11,\n    \"rejected_tokens\": 13,\n    \"stop_reason\": \"max_new_tokens\",\n    \"accepted_per_proposed\": 0.20754716981132076,\n    \"accepted_per_verified\": 0.4583333333333333\n  }\n}\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/tmp/cold-wheel-zb3tt_43/environment/bin/python",
+        "-I",
+        "-m",
+        "speculative_decoding",
+        "demo",
+        "--output",
+        "/tmp/cli-reports-ib16aksd/demo.json"
+      ],
+      "seconds": 0.11986,
+      "report": {
+        "backend": "synthetic_markov",
+        "learned_model_evaluated": false,
+        "sampling": {
+          "tokens": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "events": [
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 0
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 1
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 2
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 0,
+              "position": 3
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 4
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 1,
+              "position": 5
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 2,
+              "position": 6
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 7
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 8
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 9
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 10
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 1,
+              "position": 11
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 1,
+              "position": 12
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 13
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 14
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 1,
+              "position": 15
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 0,
+              "position": 16
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 17
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 1,
+              "position": 18
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 0,
+              "position": 19
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 20
+            },
+            {
+              "kind": "target_residual",
+              "token": 0,
+              "position": 21
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 1,
+              "position": 22
+            },
+            {
+              "kind": "accepted_draft",
+              "token": 0,
+              "position": 23
+            }
+          ],
+          "draft_calls": 53,
+          "target_calls": 24,
+          "proposed_tokens": 53,
+          "verified_tokens": 24,
+          "accepted_tokens": 11,
+          "rejected_tokens": 13,
+          "stop_reason": "max_new_tokens",
+          "accepted_per_proposed": 0.20754716981132076,
+          "accepted_per_verified": 0.4583333333333333
+        }
+      }
+    },
+    {
+      "name": "wheel_evaluate",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"experiment\": \"synthetic_probability_correctness\",\n  \"model_backend\": \"exact_markov_tables\",\n  \"learned_model_evaluated\": false,\n  \"seed\": 17,\n  \"python\": \"3.12.14\",\n  \"case_count\": 13,\n  \"samples_per_case\": 3000,\n  \"cases\": [\n    {\n      \"id\": \"distribution-00\",\n      \"target\": [\n        0.5,\n        0.5\n      ],\n      \"draft\": [\n        0.5,\n        0.5\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        1525,\n        1475\n      ],\n      \"empirical\": [\n        0.5083333333333333,\n        0.49166666666666664\n      ],\n      \"max_absolute_error\": 0.00833333333333336,\n      \"accepted_draft_tokens\": 3000,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-01\",\n      \"target\": [\n        0.9,\n        0.1\n      ],\n      \"draft\": [\n        0.1,\n        0.9\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        2706,\n        294\n      ],\n      \"empirical\": [\n        0.902,\n        0.098\n      ],\n      \"max_absolute_error\": 0.0020000000000000018,\n      \"accepted_draft_tokens\": 601,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-02\",\n      \"target\": [\n        1.0,\n        0.0\n      ],\n      \"draft\": [\n        0.0,\n        1.0\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        3000,\n        0\n      ],\n      \"empirical\": [\n        1.0,\n        0.0\n      ],\n      \"max_absolute_error\": 0.0,\n      \"accepted_draft_tokens\": 0,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-03\",\n      \"target\": [\n        0.0,\n        1.0\n      ],\n      \"draft\": [\n        1.0,\n        0.0\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        0,\n        3000\n      ],\n      \"empirical\": [\n        0.0,\n        1.0\n      ],\n      \"max_absolute_error\": 0.0,\n      \"accepted_draft_tokens\": 0,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-04\",\n      \"target\": [\n        0.7,\n        0.3\n      ],\n      \"draft\": [\n        1.0,\n        0.0\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        2090,\n        910\n      ],\n      \"empirical\": [\n        0.6966666666666667,\n        0.30333333333333334\n      ],\n      \"max_absolute_error\": 0.003333333333333355,\n      \"accepted_draft_tokens\": 2090,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-05\",\n      \"target\": [\n        0.2,\n        0.8\n      ],\n      \"draft\": [\n        0.0,\n        1.0\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        596,\n        2404\n      ],\n      \"empirical\": [\n        0.19866666666666666,\n        0.8013333333333333\n      ],\n      \"max_absolute_error\": 0.001333333333333353,\n      \"accepted_draft_tokens\": 2404,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-06\",\n      \"target\": [\n        0.1,\n        0.2,\n        0.7\n      ],\n      \"draft\": [\n        0.7,\n        0.2,\n        0.1\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        297,\n        622,\n        2081\n      ],\n      \"empirical\": [\n        0.099,\n        0.20733333333333334,\n        0.6936666666666667\n      ],\n      \"max_absolute_error\": 0.007333333333333331,\n      \"accepted_draft_tokens\": 1180,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-07\",\n      \"target\": [\n        0.0,\n        0.3,\n        0.7\n      ],\n      \"draft\": [\n        0.8,\n        0.2,\n        0.0\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        0,\n        893,\n        2107\n      ],\n      \"empirical\": [\n        0.0,\n        0.2976666666666667,\n        0.7023333333333334\n      ],\n      \"max_absolute_error\": 0.0023333333333334094,\n      \"accepted_draft_tokens\": 589,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-08\",\n      \"target\": [\n        0.3333333333,\n        0.3333333333,\n        0.3333333334\n      ],\n      \"draft\": [\n        0.1,\n        0.8,\n        0.1\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        990,\n        991,\n        1019\n      ],\n      \"empirical\": [\n        0.33,\n        0.3303333333333333,\n        0.3396666666666667\n      ],\n      \"max_absolute_error\": 0.006333333266666685,\n      \"accepted_draft_tokens\": 1592,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-09\",\n      \"target\": [\n        0.99,\n        0.005,\n        0.005\n      ],\n      \"draft\": [\n        0.01,\n        0.49,\n        0.5\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        2975,\n        11,\n        14\n      ],\n      \"empirical\": [\n        0.9916666666666667,\n        0.0036666666666666666,\n        0.004666666666666667\n      ],\n      \"max_absolute_error\": 0.0016666666666667052,\n      \"accepted_draft_tokens\": 74,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-10\",\n      \"target\": [\n        0.1,\n        0.1,\n        0.1,\n        0.7\n      ],\n      \"draft\": [\n        0.25,\n        0.25,\n        0.25,\n        0.25\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        270,\n        310,\n        278,\n        2142\n      ],\n      \"empirical\": [\n        0.09,\n        0.10333333333333333,\n        0.09266666666666666,\n        0.714\n      ],\n      \"max_absolute_error\": 0.014000000000000012,\n      \"accepted_draft_tokens\": 1636,\n      \"proposed_draft_tokens\": 3000\n    },\n    {\n      \"id\": \"distribution-11\",\n      \"target\": [\n        0.25,\n        0.25,\n        0.25,\n        0.25\n      ],\n      \"draft\": [\n        0.0,\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"samples\": 3000,\n      \"counts\": [\n        743,\n        739,\n        782,\n        736\n      ],\n      \"empirical\": [\n        0.24766666666666667,\n        0.24633333333333332,\n        0.26066666666666666,\n        0.24533333333333332\n      ],\n      \"max_absolute_error\": 0.010666666666666658,\n      \"accepted_draft_tokens\": 736,\n      \"proposed_draft_tokens\": 3000\n    }\n  ],\n  \"history_case\": {\n    \"counts\": [\n      1439,\n      336,\n      130,\n      1095\n    ],\n    \"expected_joint\": [\n      0.48,\n      0.12,\n      0.04,\n      0.36\n    ],\n    \"samples\": 3000,\n    \"max_absolute_error\": 0.007999999999999993\n  },\n  \"limitations\": [\n    \"Finite Monte Carlo checks are not a proof of implementation correctness.\",\n    \"No HF throughput or speedup was measured; verification calls are serial.\"\n  ]\n}\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/tmp/cold-wheel-zb3tt_43/environment/bin/python",
+        "-I",
+        "-m",
+        "speculative_decoding",
+        "evaluate",
+        "--output",
+        "/tmp/cli-reports-ib16aksd/evaluate.json"
+      ],
+      "seconds": 2.902063,
+      "report": {
+        "schema_version": 1,
+        "experiment": "synthetic_probability_correctness",
+        "model_backend": "exact_markov_tables",
+        "learned_model_evaluated": false,
+        "seed": 17,
+        "python": "3.12.14",
+        "case_count": 13,
+        "samples_per_case": 3000,
+        "cases": [
+          {
+            "id": "distribution-00",
+            "target": [
+              0.5,
+              0.5
+            ],
+            "draft": [
+              0.5,
+              0.5
+            ],
+            "samples": 3000,
+            "counts": [
+              1525,
+              1475
+            ],
+            "empirical": [
+              0.5083333333333333,
+              0.49166666666666664
+            ],
+            "max_absolute_error": 0.00833333333333336,
+            "accepted_draft_tokens": 3000,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-01",
+            "target": [
+              0.9,
+              0.1
+            ],
+            "draft": [
+              0.1,
+              0.9
+            ],
+            "samples": 3000,
+            "counts": [
+              2706,
+              294
+            ],
+            "empirical": [
+              0.902,
+              0.098
+            ],
+            "max_absolute_error": 0.0020000000000000018,
+            "accepted_draft_tokens": 601,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-02",
+            "target": [
+              1.0,
+              0.0
+            ],
+            "draft": [
+              0.0,
+              1.0
+            ],
+            "samples": 3000,
+            "counts": [
+              3000,
+              0
+            ],
+            "empirical": [
+              1.0,
+              0.0
+            ],
+            "max_absolute_error": 0.0,
+            "accepted_draft_tokens": 0,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-03",
+            "target": [
+              0.0,
+              1.0
+            ],
+            "draft": [
+              1.0,
+              0.0
+            ],
+            "samples": 3000,
+            "counts": [
+              0,
+              3000
+            ],
+            "empirical": [
+              0.0,
+              1.0
+            ],
+            "max_absolute_error": 0.0,
+            "accepted_draft_tokens": 0,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-04",
+            "target": [
+              0.7,
+              0.3
+            ],
+            "draft": [
+              1.0,
+              0.0
+            ],
+            "samples": 3000,
+            "counts": [
+              2090,
+              910
+            ],
+            "empirical": [
+              0.6966666666666667,
+              0.30333333333333334
+            ],
+            "max_absolute_error": 0.003333333333333355,
+            "accepted_draft_tokens": 2090,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-05",
+            "target": [
+              0.2,
+              0.8
+            ],
+            "draft": [
+              0.0,
+              1.0
+            ],
+            "samples": 3000,
+            "counts": [
+              596,
+              2404
+            ],
+            "empirical": [
+              0.19866666666666666,
+              0.8013333333333333
+            ],
+            "max_absolute_error": 0.001333333333333353,
+            "accepted_draft_tokens": 2404,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-06",
+            "target": [
+              0.1,
+              0.2,
+              0.7
+            ],
+            "draft": [
+              0.7,
+              0.2,
+              0.1
+            ],
+            "samples": 3000,
+            "counts": [
+              297,
+              622,
+              2081
+            ],
+            "empirical": [
+              0.099,
+              0.20733333333333334,
+              0.6936666666666667
+            ],
+            "max_absolute_error": 0.007333333333333331,
+            "accepted_draft_tokens": 1180,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-07",
+            "target": [
+              0.0,
+              0.3,
+              0.7
+            ],
+            "draft": [
+              0.8,
+              0.2,
+              0.0
+            ],
+            "samples": 3000,
+            "counts": [
+              0,
+              893,
+              2107
+            ],
+            "empirical": [
+              0.0,
+              0.2976666666666667,
+              0.7023333333333334
+            ],
+            "max_absolute_error": 0.0023333333333334094,
+            "accepted_draft_tokens": 589,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-08",
+            "target": [
+              0.3333333333,
+              0.3333333333,
+              0.3333333334
+            ],
+            "draft": [
+              0.1,
+              0.8,
+              0.1
+            ],
+            "samples": 3000,
+            "counts": [
+              990,
+              991,
+              1019
+            ],
+            "empirical": [
+              0.33,
+              0.3303333333333333,
+              0.3396666666666667
+            ],
+            "max_absolute_error": 0.006333333266666685,
+            "accepted_draft_tokens": 1592,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-09",
+            "target": [
+              0.99,
+              0.005,
+              0.005
+            ],
+            "draft": [
+              0.01,
+              0.49,
+              0.5
+            ],
+            "samples": 3000,
+            "counts": [
+              2975,
+              11,
+              14
+            ],
+            "empirical": [
+              0.9916666666666667,
+              0.0036666666666666666,
+              0.004666666666666667
+            ],
+            "max_absolute_error": 0.0016666666666667052,
+            "accepted_draft_tokens": 74,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-10",
+            "target": [
+              0.1,
+              0.1,
+              0.1,
+              0.7
+            ],
+            "draft": [
+              0.25,
+              0.25,
+              0.25,
+              0.25
+            ],
+            "samples": 3000,
+            "counts": [
+              270,
+              310,
+              278,
+              2142
+            ],
+            "empirical": [
+              0.09,
+              0.10333333333333333,
+              0.09266666666666666,
+              0.714
+            ],
+            "max_absolute_error": 0.014000000000000012,
+            "accepted_draft_tokens": 1636,
+            "proposed_draft_tokens": 3000
+          },
+          {
+            "id": "distribution-11",
+            "target": [
+              0.25,
+              0.25,
+              0.25,
+              0.25
+            ],
+            "draft": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "samples": 3000,
+            "counts": [
+              743,
+              739,
+              782,
+              736
+            ],
+            "empirical": [
+              0.24766666666666667,
+              0.24633333333333332,
+              0.26066666666666666,
+              0.24533333333333332
+            ],
+            "max_absolute_error": 0.010666666666666658,
+            "accepted_draft_tokens": 736,
+            "proposed_draft_tokens": 3000
+          }
+        ],
+        "history_case": {
+          "counts": [
+            1439,
+            336,
+            130,
+            1095
+          ],
+          "expected_joint": [
+            0.48,
+            0.12,
+            0.04,
+            0.36
+          ],
+          "samples": 3000,
+          "max_absolute_error": 0.007999999999999993
+        },
+        "limitations": [
+          "Finite Monte Carlo checks are not a proof of implementation correctness.",
+          "No HF throughput or speedup was measured; verification calls are serial."
+        ]
+      }
+    }
+  ]
+}
