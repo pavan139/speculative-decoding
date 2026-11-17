@@ -1,5 +1,9 @@
 # Speculative Decoding
 
+[![ci](https://github.com/pavan139/speculative-decoding/actions/workflows/ci.yml/badge.svg)](https://github.com/pavan139/speculative-decoding/actions/workflows/ci.yml) ![license: MIT](https://img.shields.io/badge/license-MIT-blue)
+
+Exact speculative decoding with KV-cache rollback, checked against target distributions that can be enumerated exactly. The cached block engine runs local GPT-2 and Llama checkpoints through Hugging Face Transformers. The only timing recorded so far is on tiny random CPU checkpoints, not trained models.
+
 A draft model proposes tokens from q. The target model supplies p. For a proposed token x, the sampler accepts with probability `min(1, p(x)/q(x))`; after rejection it samples from normalized `max(p-q, 0)`. If a whole block is accepted, it draws one extra target token.
 
 That correction matters: accepting every plausible draft token changes the output law. This repository keeps a slow full-prefix implementation, an independently enumerated finite target law, and a cached block engine so the probability and cache rules can be checked separately.
